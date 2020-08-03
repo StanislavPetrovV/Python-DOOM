@@ -380,7 +380,7 @@ class SpriteObject:
             if self.animation_count < self.animation_speed:
                 self.animation_count += 1
             else:
-                self.animation.rotate()
+                self.animation.rotate(-1)
                 self.animation_count = 0
             return sprite_object
         return self.object
