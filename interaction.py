@@ -75,7 +75,7 @@ class Interaction:
                     obj.npc_action_trigger = False
 
     def npc_move(self, obj):
-        if obj.distance_to_sprite > TILE:
+        if abs(obj.distance_to_sprite) > TILE:
             dx = obj.x - self.player.pos[0]
             dy = obj.y - self.player.pos[1]
             obj.x = obj.x + 1 if dx < 0 else obj.x - 1
